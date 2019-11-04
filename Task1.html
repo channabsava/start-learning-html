@@ -1,104 +1,104 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <style>
+      .card {
+        margin: auto;
+        width: 500px;
+        height: 800px;
+        background-image: url(./img/bg.jpg);
+        background-color: #cccccc;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+      .container {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        font-size: larger;
+        color: white;
+        text-align: left;
+        font-family: arial, fantasy;
+        align-items: center;
+      }
+      .infoContainer {
+        margin-right: 10px;
+        text-align: right;
+      }
+      .weatherAndDateHolder {
+        border-bottom: 1px solid white;
+      }
+      .number {
+        font-weight: bold;
+        margin-left: 134px;
+        font-size: 50px;
+      }
+      .heading {
+        font-weight: bold;
+        font-size: 23px;
+      }
+      .subHeading {
+        line-height: 1;
+        color: #ececec;
+        font-size: 13px;
+      }
+      .time {
+        font-weight: bold;
+        font-size: 23px;
+        display: inline-block;
+      }
+      .icon {
+        display: flex;
+        width: 9vw;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+      .square {
+        width: 80px;
+        height: 80px;
+        background-color: aquamarine;
+        margin: 5px;
+      }
 
-<head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-        <style>
-                .card {
-                        margin: auto;
-                        width: 500px;
-                        height: 800px;
-                        background-image: url(./img/bg.jpg);
-                        background-color: #cccccc;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
-                }
-                .container {
-                        height: 100%;
-                        display: flex;
-                        justify-content: flex-end;
-                        font-size: larger;
-                        color: white;
-                        text-align: left;
-                        font-family: arial, fantasy;
-                        align-items: center;
-                }
+      .headingContainer {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
 
-                .infocontainer {
-                        margin-right: 10px;
-                        border-bottom: 1px solid white;
-                        text-align: right;
-                }
-                .number {
-                        font-weight: bold;
-                        margin-left: 134px;
-                        font-size: 50px;
-                }
-                .text1 {
-                        font-weight: bold;
-                        font-size: 23px;
-                }
-                .text {
-                        margin-left: 14px;
-                        line-height: 0;
-                        color: #ececec;
-                        font-size: 13px;
+  <body>
+    <div class="card">
+      <div class="container">
+        <div class="infoContainer">
+          <div class="weatherAndDateHolder">
+            <div class="number">12<sup>o</sup></div>
+            <div class="headingContainer">
+              <div class="heading">Scattered Cloud</div>
+              <div class="subHeading">Mississauga/Canada</div>
+            </div>
+            <div class="time">
+              9:38 <span style="color: #ececec;">p.m.</span>
+            </div>
 
-                }
-                .time
-                {
-                        font-weight: bold;
-                        font-size: 23px;
-                        display:inline-block;
-                       
-                }
-                .icon {
-                        width: 50px;
-                        height: 50px;
-                        text-align: right;
-                        margin-right: 10px;
-                        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
-                       
-                }
-                .square
-                {
-                        width: 40px;
-                        height: 40px;
-                        background-color: aquamarine;
-                        background-origin: padding-box;
-                        
-                }
-        </style>
-</head>
-
-<body>
-        <div class="card">
-                <div class="container">
-
-                        <div class="infocontainer">
-                                <div class="number">12<sup>o</sup></div>
-                                <div>
-                                        <div class="text1">Scattered Cloud</div>
-                                        <div class="text">Mississauga/Canada</div>
-                                </div></br>
-                                <div class="time">
-                                   9:38  <span style="color: #ececec;">p.m.</span></div> 
-                                
-                                <div style="font-size: 14px;">Monday,03</div>
-                                        
-                                
-                        </div>
-                </div>
-                <div class="icon">
-                                <div class="square" style="margin-top: -288px;margin-left: 446px;"></div>
-                                <div class="square" style=" margin-top: -40px;margin-left: 400px;"></div>
-                                <div class="square" style=" margin-top: 11px;margin-left: 400px;"></div>
-                                <div class="square" style="margin-top: -40px;margin-left: 446px;"></div>
-                </div>
+            <div style="font-size: 14px;">Monday,03</div>
+          </div>
+          <div class="icon">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+          </div>
         </div>
-</body>
+      </div>
+    </div>
+  </body>
 </html>
