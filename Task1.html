@@ -1,57 +1,178 @@
 <!DOCTYPE html>
 <html>
-        <head>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link
-                  href="https://fonts.googleapis.com/icon?family=Material+Icons"
-                  rel="stylesheet"
-                />
-                <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
-<style>
-.container {
-    
-    
-        position: relative;
-        color: white;
-        font-size: larger;
-        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
-        max-width: 500px;
-        margin: auto;
-        text-align: left;
-        font-family: arial, fantasy;
-        width: 500px;
-        height: 800px;}
-.top-left{
-       top:80px;
-       position: absolute;
-       
-       right:10px;
-       color:salmon;
 
-        }
-        .bottom-left{
-            position: absolute;
-           bottom: 8px;
-          left: 20px;
-        }
-        .col{
-            width: 60px;
-            height: 40px;
-background-color: seashell;
-        }
-</style>
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+        <style>
+                .card {
+                        margin: auto;
+                        width: 500px;
+                        height: 800px;
+                        background-image: url(./img/bg.jpg);
+                        background-color: #cccccc;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+
+                }
+
+                .container {
+
+
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        font-size: larger;
+                        color: white;
+                        text-align: left;
+                        font-family: arial, fantasy;
+                        align-items: center;
+                }
+
+                .infocontainer {
+                        margin-right: 10px;
+                        border-bottom: 1px solid white;
+                        text-align: right;
+
+                }
+
+                div.number {
+                        font-weight: bold;
+                        margin-left: 134px;
+                        font-size: 50px;
+
+                }
+
+                div.text1 {
+                        font-weight: bold;
+                        font-size: 23px;
+
+                }
+
+                div.text {
+                        margin-left: 14px;
+                        line-height: 0;
+                        color: #ececec;
+                        font-size: 13px;
+
+                }
+                div.time
+                {
+                        font-weight: bold;
+                        font-size: 23px;
+                        display:inline-block;
+                       
+                }
+
+                .icon {
+                        width: 50px;
+                        height: 50px;
+                        text-align: right;
+                        margin-right: 10px;
+                        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+                }
+
+                .img1 {
+
+                        margin-top: -340px;
+                        padding-left: 455px;
+                        font-size: 13px;
+
+                }
+
+                .img2 {
+                        margin-top: -24px;
+                        padding-left: 455px;
+                        margin-left: -29px;
+                        font-size: 13px;
+                }
+
+                .img3 {
+                        padding-left: 426px;
+                        font-size: 13px;
+                }
+
+                .img4 {
+                        padding-left: 453px;
+                        margin-top: -24px;
+                        font-size: 13px;
+
+                }
+                .square1
+                {
+                        width: 40px;
+                        height: 40px;
+                        background-color: aquamarine;
+                        background-origin: padding-box;
+                        margin-top: -288px;
+                        margin-left: 446px;
+                }
+                .square2
+                {
+                        width: 40px;
+                        height: 40px;
+                        background-color: aquamarine;
+                        background-origin: padding-box;
+                        margin-top: -40px;
+                        margin-left: 400px;
+                }
+                .square3
+                {
+                        width: 40px;
+                        height: 40px;
+                        background-color: aquamarine;
+                        background-origin: padding-box;
+                        margin-top: 11px;
+                        margin-left: 400px;
+
+                }
+                .square4{
+                        width: 40px;
+                        height: 40px;
+                        background-color: aquamarine;
+                        background-origin: padding-box;
+                        margin-top: -40px;
+                        margin-left: 446px;
+
+                }
+
+        </style>
 </head>
+
 <body>
-<div class="container">
-      <img src="/home/channa/Desktop/forest-931706__340.jpg" alt="forest" style="width: 100%;height: 100%;" />
-    <div class="top-left">
-            <h1>welcome to forest</h1></div>
-            <div class="bottom-left">
-            <img src="/home/channa/Desktop/directions_run-24px.svg" class="col"></img>
-            <span>Direction to the forest</span>
-                  </div>
-    </div> 
-    </div>
+        <div class="card">
+                <div class="container">
+
+                        <div class="infocontainer">
+                                <div class="number">12<sup>o</sup></div>
+                                <div>
+                                        <div class="text1">Scattered Cloud</div>
+                                        <div class="text">Mississauga/Canada</div>
+                                </div></br>
+                                <div class="time">
+                                   9:38  <span style="color: #ececec;">p.m.</span>
+                                </div> 
+                                <div style="font-size: 14px;">
+                                        Monday,03
+                                </div>
+
+                        </div>
+                        
+
+                </div>
+                <div class="icon">
+                                <div class="square1"></div>
+                                <div class="square2"></div>
+                                <div class="square3"></div>
+                                <div class="square4"></div>
+
+                                
+                </div>
+                
+        </div>
 </body>
+
 </html>
