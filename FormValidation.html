@@ -18,7 +18,7 @@
       function ValidateForm() {
         var name = document.forms["myForm"]["txtname"].value;
         var mobile = document.forms["myForm"]["txtnumber"].value;
-        var phoneformat = /^[0]?[6789]\d{9}$/;
+        var phoneformat = /^[6-9]{1}\d{9}$/;
         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         var mail = document.forms["myForm"]["txtemail"].value;
         var place = document.forms["myForm"]["txtplace"].value;
@@ -29,41 +29,36 @@
           alert("Enter the name");
           return false;
         }
-
-        if (isNaN(mobile) || mobile.indexOf(" ") != -1) {
-          alert("Invalid Mobile No.");
+        //mobile  number validation
+        if (mobile.length > 0) {
+          if (mobile.length > 10 || mobile.length < 10) {
+            alert("Mobile No. should be 10 digit");
+            return false;
+          } else {
+            if (phoneformat.test(mobile.value)) {
+              alert("Mobile No. should start with 6 or 9 ");
+              return false;
+            }
+          }
+        } else {
+          alert("please enter 10 digit mobile number");
           return false;
         }
-
-        if (mobile.length > 10 || mobile.length < 10) {
-          alert("Mobile No. should be 10 digit");
-          return false;
-        }
-        if (
-          !(
-            mobile.charAt(0) == "6" ||
-            mobile.charAt(0) == "7" ||
-            mobile.charAt(0) == "8" ||
-            mobile.charAt(0) == "9"
-          )
-        ) {
-          alert("Mobile No. should start with 6 or 9 ");
-          return false;
-        }
+        //mail validation
         if (mail == "") {
           alert("enter the email");
           return false;
-        } else if (mailformat.test(mail.value)) {
+        } else if (!mailformat.test(mail.value)) {
           alert("Please provide a valid email address");
           return false;
         }
+        //place validation
         if (place == 0) {
           alert("please select the place");
           return false;
         }
-        if (genders[0].checked == true) {
-          x++;
-        } else if (genders[1].checked == true) {
+        //gender validation
+        if (genders[0].checked == true || genders[1].checked == true) {
           x++;
         } else if (x == 0) {
           alert("You must select your gender!");
