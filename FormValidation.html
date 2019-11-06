@@ -16,18 +16,22 @@
     </style>
     <script>
       function ValidateForm() {
-        name = document.forms["myForm"]["txtname"].value;
+        var name = document.forms["myForm"]["txtname"].value;
+        var mobile = document.forms["myForm"]["txtnumber"].value;
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var mail = document.forms["myForm"]["txtemail"].value;
+        var place = document.forms["myForm"]["txtplace"].value;
+        var genders = document.getElementsByName("gender");
+        let x = 0;
+
         if (name == "") {
           alert("Enter the name");
           return false;
         }
-        var mobile = document.forms["myForm"]["txtnumber"].value;
         if (mobile == "") {
           alert("Enter the mobile number");
           return false;
         }
-        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        var mail = document.forms["myForm"]["txtemail"].value;
         if (mail == "") {
           alert("enter the email");
           return false;
@@ -35,24 +39,18 @@
           alert("Please provide a valid email address");
           return false;
         }
-        var place = document.forms["myForm"]["txtplace"].value;
         if (place == 0) {
           alert("please select the place");
           return false;
         }
-        var genders = document.getElementsByName("gender");
-        let x = 0;
         if (genders[0].checked == true) {
           x++;
         } else if (genders[1].checked == true) {
           x++;
         } else if (x == 0) {
-          // no checked
           alert("You must select your gender!");
-
           return false;
         }
-
         return true;
       }
     </script>
