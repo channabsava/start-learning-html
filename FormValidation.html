@@ -18,6 +18,7 @@
       function ValidateForm() {
         var name = document.forms["myForm"]["txtname"].value;
         var mobile = document.forms["myForm"]["txtnumber"].value;
+        var phoneformat = /^[0]?[6789]\d{9}$/;
         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         var mail = document.forms["myForm"]["txtemail"].value;
         var place = document.forms["myForm"]["txtplace"].value;
@@ -28,8 +29,25 @@
           alert("Enter the name");
           return false;
         }
-        if (mobile == "") {
-          alert("Enter the mobile number");
+
+        if (isNaN(mobile) || mobile.indexOf(" ") != -1) {
+          alert("Invalid Mobile No.");
+          return false;
+        }
+
+        if (mobile.length > 10 || mobile.length < 10) {
+          alert("Mobile No. should be 10 digit");
+          return false;
+        }
+        if (
+          !(
+            mobile.charAt(0) == "6" ||
+            mobile.charAt(0) == "7" ||
+            mobile.charAt(0) == "8" ||
+            mobile.charAt(0) == "9"
+          )
+        ) {
+          alert("Mobile No. should start with 6 or 9 ");
           return false;
         }
         if (mail == "") {
