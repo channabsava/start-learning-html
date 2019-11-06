@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hotel ApplicationForm</title>
+    <style>
+      .background {
+        background: aquamarine;
+        width: 220px;
+        height: auto;
+        margin: auto;
+        padding: 20px;
+      }
+      .formDesign {
+        margin-bottom: 10px;
+      }
+    </style>
+    <script>
+      function ValidateForm() {
+        name = document.forms["myForm"]["txtname"].value;
+        if (name == "") {
+          alert("Enter the name");
+          return false;
+        }
+        var mobile = document.forms["myForm"]["txtnumber"].value;
+        if (mobile == "") {
+          alert("Enter the mobile number");
+          return false;
+        }
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var mail = document.forms["myForm"]["txtemail"].value;
+        if (mail == "") {
+          alert("enter the email");
+          return false;
+        } else if (mailformat.test(mail.value)) {
+          alert("Please provide a valid email address");
+          return false;
+        }
+        var place = document.forms["myForm"]["txtplace"].value;
+        if (place == 0) {
+          alert("please select the place");
+          return false;
+        }
+        var genders = document.getElementsByName("gender");
+        let x = 0;
+        if (genders[0].checked == true) {
+          x++;
+        } else if (genders[1].checked == true) {
+          x++;
+        } else if (x == 0) {
+          // no checked
+          alert("You must select your gender!");
+
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+    <body>
+      <div class="background">
+        <form name="myForm" onsubmit="return ValidateForm()" method="POST">
+          <div class="formDesign">
+            Name:<input type="text" name="txtname" />
+          </div>
+          <div class="formDesign">
+            Mobile-Number:<input type="number" name="txtnumber" />
+          </div>
+          <div class="formDesign">
+            Email:<input type="email" name="txtemail" />
+          </div>
+          <div class="formDesign">
+            Place:<br /><select name="txtplace">
+              <option value="0">Please select the place</option>
+              <option value="1">Bangalore</option>
+              <option value="2">Mysore</option>
+              <option value="3">Dheli</option>
+              <option value="4">Hydrabad</option> </select
+            ><br />
+          </div>
+          <div class="formDesign">
+            Gender:<input type="radio" name="gender" value="1" />male
+            <input type="radio" name="gender" value="2" />Female<br />
+          </div>
+          <div class="formDesign">
+            <input type="submit" value="submit" />
+          </div>
+        </form>
+      </div>
+    </body>
+  </head>
+</html>
